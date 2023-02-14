@@ -1,3 +1,8 @@
+:root {
+  --area-porta-altura: 310px;
+  --area-porta-largura: 200px;
+}
+
 
 * {
   box-sizing: border-box;
