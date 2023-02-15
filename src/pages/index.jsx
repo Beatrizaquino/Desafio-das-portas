@@ -2,17 +2,25 @@ import Presente from "../../components/Presente"
 import Porta from "../../components/Porta"
 import PortaModel from "model/porta"
 import { useState } from "react"
+import { atualiazarPortas, criarPortas } from "function/porta"
 
 export default function Home() {
 
-  const [p1, setP1] = useState(new PortaModel(1))
-  const [texto, setTexto]= useState("...")
+ 
 
+  const [portas, setPortas]= useState(criarPortas(3,2))
+  
+  function renderizarPortas(){
+    return portas.map(porta => {
+      return <Porta key={porta.numero} value={porta} 
+      onChange={novaPorta => setPortas(atualiazarPortas(portas, novaPorta))}
+       />
+    })
+  }
 
   return (
-    <div style={{display:"flex", flexDirection: "column"}}>
-      <input type="text"value={texto} onChange={e => setTexto(e.targe.value)} />
-      <Porta value={p1} onChange={novaPorta => setP1(novaPorta)} />
+    <div style={{display:"flex",}}>
+      {renderizarPortas()}
     </div>
   )
 }
