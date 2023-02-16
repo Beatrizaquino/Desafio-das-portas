@@ -30,6 +30,10 @@ export default class PortaModel {
     get aberta() {
         return this.#aberta
     }
+     
+    get fechada() {
+        return !this.#aberta
+    }
 
     //alterando o estado da porta sem mexer na instância altual
     desselecinar() {
