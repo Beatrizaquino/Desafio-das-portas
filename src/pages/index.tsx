@@ -24,10 +24,10 @@ export default function Form() {
       < Card>
         <EntradaNumerica  text="Porta com Presente" value={comPresente} onChange={novaPortaComPresente => setComPresente(novaPortaComPresente)}/>
       </Card> 
+      
        <Card bgcolor="#28a085">
-        <Link href={`jogos/${qtdePortas}/${comPresente}`}>
-          <h2 className={styles.lin}>Iniciar</h2>
-        </Link>
+        <Link href={`jogos/${qtdePortas}/${comPresente}`} className={styles.lin}>Iniciar</Link>
+       
        </Card>
       </div>   
     </div>
