@@ -16,7 +16,6 @@ export default function jogo() {
       setPortas(criarPortas(portas, temPresente))
     }, [router?.query])
 
-   console.log(router?.query)
   
   function renderizarPortas(){
     return portas.map(porta => {
