@@ -15,7 +15,7 @@ export default function jogo() {
       const temPresente = +router.query.temPresente
       setPortas(criarPortas(portas, temPresente))
     }, [router?.query])
-
+ 
   
   function renderizarPortas(){
     return portas.map(porta => {
